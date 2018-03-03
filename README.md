@@ -28,6 +28,12 @@ Swift 4:
 pod "TSVoiceConverter", '0.1.6'
 ```
 
+- **For iOS 8+ projects** with [Carthage](https://github.com/Carthage/Carthage):
+```swift
+github "dongxiexidu/TSVoiceConverter"
+```
+
+
 ## Compile
 [Here is the opencore-amr source file](https://sourceforge.net/projects/opencore-amr/?source=typ_redirect), download the source code, run `Compile/build.sh`
 

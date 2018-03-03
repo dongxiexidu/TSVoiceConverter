@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		076A5C35E3559A62C1C7A77C /* Pods_TSVoiceConverterDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C828AF9E69F662F5DF1BD8FE /* Pods_TSVoiceConverterDemo.framework */; };
+		110C76AD204ADA2D00CEEFD6 /* TSVoiceConverter.h in Headers */ = {isa = PBXBuildFile; fileRef = 110C76AB204ADA2D00CEEFD6 /* TSVoiceConverter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		110C76B0204ADA2D00CEEFD6 /* TSVoiceConverter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 110C76A9204ADA2D00CEEFD6 /* TSVoiceConverter.framework */; };
+		110C76B1204ADA2D00CEEFD6 /* TSVoiceConverter.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 110C76A9204ADA2D00CEEFD6 /* TSVoiceConverter.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		110C76D6204ADAA100CEEFD6 /* TSVoiceConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110C76D4204ADA7A00CEEFD6 /* TSVoiceConverter.swift */; };
 		AE2F1BD31CAAE26C00D77534 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE2F1BD21CAAE26C00D77534 /* AppDelegate.swift */; };
 		AE2F1BD51CAAE26C00D77534 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE2F1BD41CAAE26C00D77534 /* ViewController.swift */; };
 		AE2F1BD81CAAE26C00D77534 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE2F1BD61CAAE26C00D77534 /* Main.storyboard */; };
@@ -19,6 +23,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		110C76AE204ADA2D00CEEFD6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AE2F1BC71CAAE26C00D77534 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 110C76A8204ADA2D00CEEFD6;
+			remoteInfo = TSVoiceConverter;
+		};
 		AE2F1BE41CAAE26C00D77534 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = AE2F1BC71CAAE26C00D77534 /* Project object */;
@@ -28,7 +39,50 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		110C76B5204ADA2D00CEEFD6 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				110C76B1204ADA2D00CEEFD6 /* TSVoiceConverter.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		110C76A9204ADA2D00CEEFD6 /* TSVoiceConverter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TSVoiceConverter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		110C76AB204ADA2D00CEEFD6 /* TSVoiceConverter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TSVoiceConverter.h; sourceTree = "<group>"; };
+		110C76AC204ADA2D00CEEFD6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		110C76B8204ADA7A00CEEFD6 /* amrFileCodec.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = amrFileCodec.h; sourceTree = "<group>"; };
+		110C76B9204ADA7A00CEEFD6 /* amrFileCodec.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = amrFileCodec.mm; sourceTree = "<group>"; };
+		110C76BA204ADA7A00CEEFD6 /* wav.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = wav.h; sourceTree = "<group>"; };
+		110C76BB204ADA7A00CEEFD6 /* wav.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = wav.mm; sourceTree = "<group>"; };
+		110C76BD204ADA7A00CEEFD6 /* libopencore-amrnb.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libopencore-amrnb.a"; sourceTree = "<group>"; };
+		110C76BE204ADA7A00CEEFD6 /* libopencore-amrnb.a.arm64 */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libopencore-amrnb.a.arm64"; sourceTree = "<group>"; };
+		110C76BF204ADA7A00CEEFD6 /* libopencore-amrnb.a.armv7 */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libopencore-amrnb.a.armv7"; sourceTree = "<group>"; };
+		110C76C0204ADA7A00CEEFD6 /* libopencore-amrnb.a.armv7s */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libopencore-amrnb.a.armv7s"; sourceTree = "<group>"; };
+		110C76C1204ADA7A00CEEFD6 /* libopencore-amrnb.a.i386 */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libopencore-amrnb.a.i386"; sourceTree = "<group>"; };
+		110C76C2204ADA7A00CEEFD6 /* libopencore-amrnb.a.x86_64 */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libopencore-amrnb.a.x86_64"; sourceTree = "<group>"; };
+		110C76C3204ADA7A00CEEFD6 /* libopencore-amrnb.la */ = {isa = PBXFileReference; lastKnownFileType = text; path = "libopencore-amrnb.la"; sourceTree = "<group>"; };
+		110C76C4204ADA7A00CEEFD6 /* libopencore-amrwb.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libopencore-amrwb.a"; sourceTree = "<group>"; };
+		110C76C5204ADA7A00CEEFD6 /* libopencore-amrwb.a.arm64 */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libopencore-amrwb.a.arm64"; sourceTree = "<group>"; };
+		110C76C6204ADA7A00CEEFD6 /* libopencore-amrwb.a.armv7 */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libopencore-amrwb.a.armv7"; sourceTree = "<group>"; };
+		110C76C7204ADA7A00CEEFD6 /* libopencore-amrwb.a.armv7s */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libopencore-amrwb.a.armv7s"; sourceTree = "<group>"; };
+		110C76C8204ADA7A00CEEFD6 /* libopencore-amrwb.a.i386 */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libopencore-amrwb.a.i386"; sourceTree = "<group>"; };
+		110C76C9204ADA7A00CEEFD6 /* libopencore-amrwb.a.x86_64 */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libopencore-amrwb.a.x86_64"; sourceTree = "<group>"; };
+		110C76CA204ADA7A00CEEFD6 /* libopencore-amrwb.la */ = {isa = PBXFileReference; lastKnownFileType = text; path = "libopencore-amrwb.la"; sourceTree = "<group>"; };
+		110C76CC204ADA7A00CEEFD6 /* opencore-amrnb.pc */ = {isa = PBXFileReference; lastKnownFileType = text; path = "opencore-amrnb.pc"; sourceTree = "<group>"; };
+		110C76CD204ADA7A00CEEFD6 /* opencore-amrwb.pc */ = {isa = PBXFileReference; lastKnownFileType = text; path = "opencore-amrwb.pc"; sourceTree = "<group>"; };
+		110C76CF204ADA7A00CEEFD6 /* interf_dec.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = interf_dec.h; sourceTree = "<group>"; };
+		110C76D0204ADA7A00CEEFD6 /* interf_enc.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = interf_enc.h; sourceTree = "<group>"; };
+		110C76D2204ADA7A00CEEFD6 /* dec_if.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = dec_if.h; sourceTree = "<group>"; };
+		110C76D3204ADA7A00CEEFD6 /* if_rom.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = if_rom.h; sourceTree = "<group>"; };
+		110C76D4204ADA7A00CEEFD6 /* TSVoiceConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TSVoiceConverter.swift; sourceTree = "<group>"; };
+		110C76D5204ADA7A00CEEFD6 /* TSVoiceConverterHeaders.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TSVoiceConverterHeaders.h; sourceTree = "<group>"; };
 		8D9000A3050EBDA0A98CD446 /* Pods-TSVoiceConverterDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TSVoiceConverterDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TSVoiceConverterDemo/Pods-TSVoiceConverterDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		AE2F1BCF1CAAE26C00D77534 /* TSVoiceConverterDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TSVoiceConverterDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE2F1BD21CAAE26C00D77534 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -47,11 +101,19 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		110C76A5204ADA2D00CEEFD6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		AE2F1BCC1CAAE26C00D77534 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				076A5C35E3559A62C1C7A77C /* Pods_TSVoiceConverterDemo.framework in Frameworks */,
+				110C76B0204ADA2D00CEEFD6 /* TSVoiceConverter.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +127,89 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		110C76AA204ADA2D00CEEFD6 /* TSVoiceConverter */ = {
+			isa = PBXGroup;
+			children = (
+				110C76AB204ADA2D00CEEFD6 /* TSVoiceConverter.h */,
+				110C76AC204ADA2D00CEEFD6 /* Info.plist */,
+			);
+			path = TSVoiceConverter;
+			sourceTree = "<group>";
+		};
+		110C76B6204ADA7A00CEEFD6 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				110C76B7204ADA7A00CEEFD6 /* amrwapper */,
+				110C76BC204ADA7A00CEEFD6 /* lib */,
+				110C76CE204ADA7A00CEEFD6 /* opencore-amrnb */,
+				110C76D1204ADA7A00CEEFD6 /* opencore-amrwb */,
+				110C76D4204ADA7A00CEEFD6 /* TSVoiceConverter.swift */,
+				110C76D5204ADA7A00CEEFD6 /* TSVoiceConverterHeaders.h */,
+			);
+			name = Sources;
+			path = ../Sources;
+			sourceTree = "<group>";
+		};
+		110C76B7204ADA7A00CEEFD6 /* amrwapper */ = {
+			isa = PBXGroup;
+			children = (
+				110C76B8204ADA7A00CEEFD6 /* amrFileCodec.h */,
+				110C76B9204ADA7A00CEEFD6 /* amrFileCodec.mm */,
+				110C76BA204ADA7A00CEEFD6 /* wav.h */,
+				110C76BB204ADA7A00CEEFD6 /* wav.mm */,
+			);
+			path = amrwapper;
+			sourceTree = "<group>";
+		};
+		110C76BC204ADA7A00CEEFD6 /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				110C76BD204ADA7A00CEEFD6 /* libopencore-amrnb.a */,
+				110C76BE204ADA7A00CEEFD6 /* libopencore-amrnb.a.arm64 */,
+				110C76BF204ADA7A00CEEFD6 /* libopencore-amrnb.a.armv7 */,
+				110C76C0204ADA7A00CEEFD6 /* libopencore-amrnb.a.armv7s */,
+				110C76C1204ADA7A00CEEFD6 /* libopencore-amrnb.a.i386 */,
+				110C76C2204ADA7A00CEEFD6 /* libopencore-amrnb.a.x86_64 */,
+				110C76C3204ADA7A00CEEFD6 /* libopencore-amrnb.la */,
+				110C76C4204ADA7A00CEEFD6 /* libopencore-amrwb.a */,
+				110C76C5204ADA7A00CEEFD6 /* libopencore-amrwb.a.arm64 */,
+				110C76C6204ADA7A00CEEFD6 /* libopencore-amrwb.a.armv7 */,
+				110C76C7204ADA7A00CEEFD6 /* libopencore-amrwb.a.armv7s */,
+				110C76C8204ADA7A00CEEFD6 /* libopencore-amrwb.a.i386 */,
+				110C76C9204ADA7A00CEEFD6 /* libopencore-amrwb.a.x86_64 */,
+				110C76CA204ADA7A00CEEFD6 /* libopencore-amrwb.la */,
+				110C76CB204ADA7A00CEEFD6 /* pkgconfig */,
+			);
+			path = lib;
+			sourceTree = "<group>";
+		};
+		110C76CB204ADA7A00CEEFD6 /* pkgconfig */ = {
+			isa = PBXGroup;
+			children = (
+				110C76CC204ADA7A00CEEFD6 /* opencore-amrnb.pc */,
+				110C76CD204ADA7A00CEEFD6 /* opencore-amrwb.pc */,
+			);
+			path = pkgconfig;
+			sourceTree = "<group>";
+		};
+		110C76CE204ADA7A00CEEFD6 /* opencore-amrnb */ = {
+			isa = PBXGroup;
+			children = (
+				110C76CF204ADA7A00CEEFD6 /* interf_dec.h */,
+				110C76D0204ADA7A00CEEFD6 /* interf_enc.h */,
+			);
+			path = "opencore-amrnb";
+			sourceTree = "<group>";
+		};
+		110C76D1204ADA7A00CEEFD6 /* opencore-amrwb */ = {
+			isa = PBXGroup;
+			children = (
+				110C76D2204ADA7A00CEEFD6 /* dec_if.h */,
+				110C76D3204ADA7A00CEEFD6 /* if_rom.h */,
+			);
+			path = "opencore-amrwb";
+			sourceTree = "<group>";
+		};
 		A4B2AA9BDC6E5130EB03DD15 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -77,8 +222,10 @@
 		AE2F1BC61CAAE26C00D77534 = {
 			isa = PBXGroup;
 			children = (
+				110C76B6204ADA7A00CEEFD6 /* Sources */,
 				AE2F1BD11CAAE26C00D77534 /* TSVoiceConverterDemo */,
 				AE2F1BE61CAAE26C00D77534 /* TSVoiceConverterDemoTests */,
+				110C76AA204ADA2D00CEEFD6 /* TSVoiceConverter */,
 				AE2F1BD01CAAE26C00D77534 /* Products */,
 				A4B2AA9BDC6E5130EB03DD15 /* Pods */,
 				D966E84003D012E552D18E94 /* Frameworks */,
@@ -90,6 +237,7 @@
 			children = (
 				AE2F1BCF1CAAE26C00D77534 /* TSVoiceConverterDemo.app */,
 				AE2F1BE31CAAE26C00D77534 /* TSVoiceConverterDemoTests.xctest */,
+				110C76A9204ADA2D00CEEFD6 /* TSVoiceConverter.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -128,7 +276,36 @@
 		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		110C76A6204ADA2D00CEEFD6 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				110C76AD204ADA2D00CEEFD6 /* TSVoiceConverter.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
+		110C76A8204ADA2D00CEEFD6 /* TSVoiceConverter */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 110C76B4204ADA2D00CEEFD6 /* Build configuration list for PBXNativeTarget "TSVoiceConverter" */;
+			buildPhases = (
+				110C76A4204ADA2D00CEEFD6 /* Sources */,
+				110C76A5204ADA2D00CEEFD6 /* Frameworks */,
+				110C76A6204ADA2D00CEEFD6 /* Headers */,
+				110C76A7204ADA2D00CEEFD6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TSVoiceConverter;
+			productName = TSVoiceConverter;
+			productReference = 110C76A9204ADA2D00CEEFD6 /* TSVoiceConverter.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 		AE2F1BCE1CAAE26C00D77534 /* TSVoiceConverterDemo */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = AE2F1BEC1CAAE26C00D77534 /* Build configuration list for PBXNativeTarget "TSVoiceConverterDemo" */;
@@ -139,10 +316,12 @@
 				AE2F1BCD1CAAE26C00D77534 /* Resources */,
 				0A1327D1692D38E55B28FD8F /* [CP] Embed Pods Frameworks */,
 				97A0009764E3DA333BD3D42E /* [CP] Copy Pods Resources */,
+				110C76B5204ADA2D00CEEFD6 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				110C76AF204ADA2D00CEEFD6 /* PBXTargetDependency */,
 			);
 			name = TSVoiceConverterDemo;
 			productName = TSVoiceConverterDemo;
@@ -177,6 +356,10 @@
 				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = Hilen;
 				TargetAttributes = {
+					110C76A8204ADA2D00CEEFD6 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
 					AE2F1BCE1CAAE26C00D77534 = {
 						CreatedOnToolsVersion = 7.3;
 						LastSwiftMigration = 0800;
@@ -203,11 +386,19 @@
 			targets = (
 				AE2F1BCE1CAAE26C00D77534 /* TSVoiceConverterDemo */,
 				AE2F1BE21CAAE26C00D77534 /* TSVoiceConverterDemoTests */,
+				110C76A8204ADA2D00CEEFD6 /* TSVoiceConverter */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		110C76A7204ADA2D00CEEFD6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		AE2F1BCD1CAAE26C00D77534 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -278,6 +469,14 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		110C76A4204ADA2D00CEEFD6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				110C76D6204ADAA100CEEFD6 /* TSVoiceConverter.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		AE2F1BCB1CAAE26C00D77534 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -298,6 +497,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		110C76AF204ADA2D00CEEFD6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 110C76A8204ADA2D00CEEFD6 /* TSVoiceConverter */;
+			targetProxy = 110C76AE204ADA2D00CEEFD6 /* PBXContainerItemProxy */;
+		};
 		AE2F1BE51CAAE26C00D77534 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = AE2F1BCE1CAAE26C00D77534 /* TSVoiceConverterDemo */;
@@ -325,6 +529,65 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		110C76B2204ADA2D00CEEFD6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = TSVoiceConverter/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.shangzhu.TSVoiceConverter;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		110C76B3204ADA2D00CEEFD6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = TSVoiceConverter/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.shangzhu.TSVoiceConverter;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		AE2F1BEA1CAAE26C00D77534 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -429,8 +692,10 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 8D9000A3050EBDA0A98CD446 /* Pods-TSVoiceConverterDemo.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = TSVoiceConverterDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Hilen.TSVoiceConverterDemo;
@@ -445,8 +710,10 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = FA568B99163FE2414CC0C659 /* Pods-TSVoiceConverterDemo.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = TSVoiceConverterDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Hilen.TSVoiceConverterDemo;
@@ -485,6 +752,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		110C76B4204ADA2D00CEEFD6 /* Build configuration list for PBXNativeTarget "TSVoiceConverter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				110C76B2204ADA2D00CEEFD6 /* Debug */,
+				110C76B3204ADA2D00CEEFD6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		AE2F1BCA1CAAE26C00D77534 /* Build configuration list for PBXProject "TSVoiceConverterDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
